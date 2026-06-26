@@ -42,7 +42,7 @@ body::before {
   padding: 28px 18px 20px;
 }
 
-.hero, .section-card, .trust-panel, .final-cta {
+.hero, .section-card, .trust-panel, .final-cta, .calendar-card {
   border: 1px solid var(--line);
   background: linear-gradient(180deg, rgba(255,255,255,0.095), rgba(255,255,255,0.035));
   border-radius: 30px;
@@ -87,7 +87,7 @@ h1 {
   text-wrap: balance;
 }
 
-.subheadline {
+.subheadline, .calendar-copy {
   color: #dce5d7;
   font-size: 1.03rem;
   line-height: 1.65;
@@ -134,7 +134,12 @@ h1 {
   outline: none;
 }
 
-.section-card, .trust-panel, .final-cta {
+.disabled-link {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+.section-card, .trust-panel, .final-cta, .calendar-card {
   margin-top: 18px;
   padding: 24px 18px;
 }
@@ -144,6 +149,78 @@ h2 {
   font-size: clamp(1.55rem, 7vw, 2.55rem);
   line-height: 1.03;
   letter-spacing: -0.045em;
+}
+
+.calendar-card {
+  scroll-margin-top: 18px;
+}
+
+.calendar-controls {
+  display: grid;
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.calendar-controls label {
+  display: grid;
+  gap: 8px;
+  color: var(--soft-gold);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.calendar-controls input,
+.calendar-controls select {
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid rgba(241, 217, 145, 0.22);
+  border-radius: 16px;
+  padding: 0 14px;
+  color: var(--cream);
+  background: rgba(5, 7, 6, 0.72);
+  font: inherit;
+  font-weight: 800;
+}
+
+.slot-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  max-height: 330px;
+  overflow: auto;
+  padding: 4px 2px 8px;
+}
+
+.slot-button {
+  min-height: 48px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 15px;
+  color: var(--cream);
+  background: rgba(5, 7, 6, 0.58);
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.slot-button.selected {
+  color: #10140e;
+  background: linear-gradient(135deg, var(--soft-gold), var(--gold));
+  border-color: rgba(255,255,255,0.2);
+}
+
+.selected-slot {
+  margin: 14px 0 0;
+  color: var(--soft-gold);
+  font-weight: 800;
+  line-height: 1.45;
+}
+
+.booking-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
 }
 
 .help-grid, .trust-grid {
@@ -191,12 +268,14 @@ h2 {
   text-align: center;
 }
 
-.site-footer strong, .site-footer span { display: block; }
+.site-footer strong, .site-footer span, .site-footer a { display: block; }
 .site-footer strong { color: var(--cream); margin-bottom: 7px; }
+.site-footer a { color: var(--soft-gold); margin-top: 8px; text-decoration: none; font-weight: 900; }
 
 @media (min-width: 640px) {
   .page-shell { padding-top: 42px; }
-  .hero, .section-card, .trust-panel, .final-cta { padding: 34px; }
+  .hero, .section-card, .trust-panel, .final-cta, .calendar-card { padding: 34px; }
   h1 { max-width: 12ch; }
-  .help-grid, .trust-grid { grid-template-columns: repeat(2, 1fr); }
+  .help-grid, .trust-grid, .calendar-controls { grid-template-columns: repeat(2, 1fr); }
+  .slot-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
