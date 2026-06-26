@@ -21,12 +21,47 @@
       <nav class="link-stack" aria-label="Synergy4Life quick links">
         <a class="hub-button primary" href="https://www.skool.com/synergy4life-credit-academy-8250/about?ref=395f72ade3914aec8b3e2cd0f22c71ce" target="_blank" rel="noopener">Join Free Skool Community</a>
         <a class="hub-button" href="https://www.identityiq.com/get-all-your-reports-now.aspx?offercode=431133QX" target="_blank" rel="noopener">Get Full 3-Bureau Report</a>
-        <a class="hub-button" href="mailto:synergy4life247@gmail.com?subject=Request%20Credit%20File%20Review&body=Hey%20James%2C%20I%20want%20to%20request%20a%20credit%20file%20review.%0A%0AName%3A%0APhone%3A%0ACredit%20goal%3A%0ATimeline%3A%0A">Request Credit File Review</a>
+        <a class="hub-button" href="https://synergy4life247-glitch.github.io/synergy4life-credit-review/">Request Credit File Review</a>
         <a class="hub-button" href="mailto:synergy4life247@gmail.com?subject=Mortgage-Ready%20Credit%20Help&body=Hey%20James%2C%20I%20need%20mortgage-ready%20credit%20help.%0A%0AName%3A%0APhone%3A%0ATarget%20homebuying%20timeline%3A%0ACurrent%20credit%20concern%3A%0A">Mortgage-Ready Credit Help</a>
         <a class="hub-button" href="mailto:synergy4life247@gmail.com?subject=Mentorship%20%2F%20Credit%20Repair%20Business%20Help&body=Hey%20James%2C%20I%20want%20more%20information%20about%20mentorship%20or%20credit%20repair%20business%20help.%0A%0AName%3A%0APhone%3A%0AExperience%20level%3A%0AGoal%3A%0A">Mentorship / Credit Repair Business Help</a>
-        <a class="hub-button" href="mailto:synergy4life247@gmail.com?subject=Book%20a%20Calendar%20Call%20with%20James&body=Hey%20James%2C%20I%20want%20to%20book%20a%20calendar%20call.%0A%0AName%3A%0APhone%3A%0AWhat%20I%20need%20help%20with%3A%0ABest%20days%2Ftimes%3A%0A">Book Calendar Call</a>
-        <a class="hub-button" href="tel:+14047757695">Contact James</a>
+        <a class="hub-button" href="#calendar">Book Calendar Call</a>
+        <a class="hub-button" href="tel:+18137851739">Contact James</a>
       </nav>
+    </section>
+
+    <section class="calendar-card" id="calendar" aria-labelledby="calendar-title">
+      <p class="section-kicker">Book James</p>
+      <h2 id="calendar-title">Pick a 15 or 20 minute call slot.</h2>
+      <p class="calendar-copy">Choose a day, call length, and phone or Zoom. Slots run from 9:00 AM to 7:00 PM Eastern. After you pick a time, send the request or create a calendar invite.</p>
+
+      <div class="calendar-controls">
+        <label>
+          Day
+          <input id="booking-date" type="date" aria-label="Choose booking date">
+        </label>
+        <label>
+          Length
+          <select id="booking-duration" aria-label="Choose call length">
+            <option value="15">15 minutes</option>
+            <option value="20" selected>20 minutes</option>
+          </select>
+        </label>
+        <label>
+          Type
+          <select id="booking-type" aria-label="Choose call type">
+            <option value="Phone call">Phone call</option>
+            <option value="Zoom call">Zoom call</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="slot-grid" id="slot-grid" aria-label="Available call slots"></div>
+      <p class="selected-slot" id="selected-slot">Select a slot to request a call.</p>
+
+      <div class="booking-actions">
+        <a class="hub-button primary disabled-link" id="request-slot" href="#" aria-disabled="true">Request Selected Slot</a>
+        <a class="hub-button disabled-link" id="calendar-invite" href="#" target="_blank" rel="noopener" aria-disabled="true">Add Calendar Invite</a>
+      </div>
     </section>
 
     <section class="section-card" aria-labelledby="help-title">
@@ -62,6 +97,7 @@
   <footer class="site-footer">
     <strong>Synergy4Life Credit Academy</strong>
     <span>Credit education. Strategy. Rebuild. Ownership.</span>
+    <a href="tel:+18137851739">813-785-1739</a>
   </footer>
 
   <script src="script.js"></script>
